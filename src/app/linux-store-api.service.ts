@@ -25,7 +25,9 @@ interface HashTable<T> {
 
 const RECENTLY_UPDATED_LIMIT = 20;
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class LinuxStoreApiService {
   private baseUrl = environment.apiUrl; // URL to web api
   private appListCache: HashTable<App[]> = {};

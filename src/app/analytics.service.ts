@@ -6,13 +6,11 @@ import { Angulartics2Piwik } from 'angulartics2/piwik';
 declare let ga: Function;
 
 /**
- * @description
- *
  * Provides tracking of pageviews and events in Google Analytics and Matomo
- *
- *
  */
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class AnalyticsService {
   constructor(
     private angulartics2: Angulartics2,

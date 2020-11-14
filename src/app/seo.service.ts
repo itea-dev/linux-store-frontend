@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class SeoService {
 
   constructor(
